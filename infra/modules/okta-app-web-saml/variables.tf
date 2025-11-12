@@ -18,7 +18,7 @@ variable "audience" {
   type = string
 }
 
-variable "name_id_format" {
+variable "subject_name_id_format" {
   type    = string
   default = "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
 }
