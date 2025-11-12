@@ -24,6 +24,15 @@ resource "okta_app_group_assignments" "assign" {
   }
 }
 
-output "app_id"    { value = okta_app_oauth.this.id }
-output "client_id" { value = okta_app_oauth.this.client_id }
-output "assigned_group_ids" { value = [for g in okta_app_group_assignments.assign.group : g.id] }
+output "app_id" {
+  value = okta_app_oauth.this.id
+}
+
+output "client_id" {
+  value = okta_app_oauth.this.client_id
+}
+
+output "assigned_group_ids" {
+  value = [for g in okta_app_group_assignments.assign.group : g.id]
+}
+
